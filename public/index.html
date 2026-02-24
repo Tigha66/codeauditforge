@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CodeAuditForge - AI Code Auditor</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gradient-to-br from-slate-900 via-green-900 to-slate-900 min-h-screen text-white">
+  <header class="border-b border-white/10 bg-slate-900/90 backdrop-blur-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl flex items-center justify-center">
+          <i class="fas fa-code text-white"></i>
+        </div>
+        <span class="text-xl font-bold">CodeAuditForge</span>
+      </div>
+      <button class="bg-green-500 hover:bg-green-400 px-4 py-2 rounded-xl font-medium">
+        <i class="fas fa-search mr-2"></i>Scan Repo
+      </button>
+    </div>
+  </header>
+  <main class="max-w-7xl mx-auto px-6 py-8">
+    <div class="grid grid-cols-4 gap-4 mb-8">
+      <div class="bg-white/5 border border-white/10 rounded-xl p-5"><p class="text-slate-400 text-sm">Repos Scanned</p><p class="text-3xl font-bold">24</p></div>
+      <div class="bg-white/5 border border-white/10 rounded-xl p-5"><p class="text-slate-400 text-sm">Issues Found</p><p class="text-3xl font-bold text-yellow-400">47</p></div>
+      <div class="bg-white/5 border border-white/10 rounded-xl p-5"><p class="text-slate-400 text-sm">Security Flags</p><p class="text-3xl font-bold text-red-400">3</p></div>
+      <div class="bg-white/5 border border-white/10 rounded-xl p-5"><p class="text-slate-400 text-sm">Fixed</p><p class="text-3xl font-bold text-green-400">89%</p></div>
+    </div>
+    <div class="bg-white/5 border border-white/10 rounded-2xl p-6 mb-8">
+      <h2 class="text-xl font-bold mb-4 flex items-center gap-2"><i class="fas fa-bug text-red-400"></i> Latest Scan Results</h2>
+      <div class="space-y-3">
+        <div class="bg-white/5 rounded-xl p-4 border-l-4 border-red-500"><div class="flex items-center justify-between"><p class="font-medium">SQL Injection vulnerability</p><span class="bg-red-500/20 text-red-400 text-xs px-2 py-1 rounded">Critical</span></div><p class="text-slate-400 text-xs mt-1">src/db/users.js:42</p></div>
+        <div class="bg-white/5 rounded-xl p-4 border-l-4 border-yellow-500"><div class="flex items-center justify-between"><p class="font-medium">Unused variable</p><span class="bg-yellow-500/20 text-yellow-400 text-xs px-2 py-1 rounded">Warning</span></div><p class="text-slate-400 text-xs mt-1">src/utils/helpers.js:15</p></div>
+        <div class="bg-white/5 rounded-xl p-4 border-l-4 border-blue-500"><div class="flex items-center justify-between"><p class="font-medium">Missing error handling</p><span class="bg-blue-500/20 text-blue-400 text-xs px-2 py-1 rounded">Info</span></div><p class="text-slate-400 text-xs mt-1">src/api/routes.js:78</p></div>
+      </div>
+    </div>
+    <div class="grid lg:grid-cols-2 gap-8">
+      <div class="bg-white/5 border border-white/10 rounded-2xl p-6">
+        <h2 class="text-xl font-bold mb-4 flex items-center gap-2"><i class="fas fa-lightbulb text-yellow-400"></i> Refactor Suggestions</h2>
+        <div class="space-y-3">
+          <div class="bg-white/5 rounded-xl p-4"><p class="font-medium">Extract function getUserData()</p><p class="text-slate-400 text-xs">Reduces complexity by 12 points</p></div>
+          <div class="bg-white/5 rounded-xl p-4"><p class="font-medium">Add memoization to expensive call</p><p class="text-slate-400 text-xs">Can improve performance by 40%</p></div>
+        </div>
+      </div>
+      <div class="bg-white/5 border border-white/10 rounded-2xl p-6">
+        <h2 class="text-xl font-bold mb-4 flex items-center gap-2"><i class="fas fa-vial text-purple-400"></i> Test Suggestions</h2>
+        <div class="space-y-3">
+          <div class="bg-white/5 rounded-xl p-4"><p class="font-medium">Add test for user auth flow</p><p class="text-slate-400 text-xs">Coverage +15%</p></div>
+          <div class="bg-white/5 rounded-xl p-4"><p class="font-medium">Mock external API calls</p><p class="text-slate-400 text-xs">Reliability +20%</p></div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="py-8 text-center text-slate-500 text-sm">CodeAuditForge - Developer Tools AI Auditor • by Tigha66</footer>
+</body>
+</html>
